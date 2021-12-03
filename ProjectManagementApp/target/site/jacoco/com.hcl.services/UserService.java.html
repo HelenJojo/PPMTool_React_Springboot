@@ -18,23 +18,22 @@ import org.springframework.stereotype.Service;
 
     public User saveUser(User newUser) {
         try{ //this encode() just encodes the password
-<span class="nc" id="L21">            newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));</span>
+<span class="fc" id="L21">            newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));</span>
 
             //Username has to be unique (exception)
-<span class="nc" id="L24">            newUser.setUsername(newUser.getUsername());</span>
+<span class="fc" id="L24">            newUser.setUsername(newUser.getUsername());</span>
 
             // Make sure that password and confirmPassword match
             // We don't persist or show the confirmPassword
-<span class="nc" id="L28">            newUser.setConfirmPassword(&quot;&quot;);</span>
-<span class="nc" id="L29">            return userRepository.save(newUser);}</span>
+<span class="fc" id="L28">            newUser.setConfirmPassword(&quot;&quot;);</span>
+<span class="fc" id="L29">            return userRepository.save(newUser);}</span>
 <span class="nc" id="L30">        catch(Exception e){</span>
 <span class="nc" id="L31">            throw new UsernameAlreadyExistsException(&quot;Username '&quot; + newUser.getUsername()+ &quot;' already exists!&quot;);</span>
         }
 
     }
     public Iterable&lt;User&gt; findAll(){
-
-<span class="fc" id="L37">        return userRepository.findAll();</span>
+<span class="fc" id="L36">        return userRepository.findAll();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

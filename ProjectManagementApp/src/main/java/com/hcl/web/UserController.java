@@ -22,6 +22,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 
 import static com.hcl.security.SecurityConstants.TOKEN_PREFIX;
@@ -31,6 +32,7 @@ import static com.hcl.security.SecurityConstants.TOKEN_PREFIX;
 public class UserController {
    
     @Autowired
+    @Resource(name = "mapErrorValidationService")
     private MapErrorValidationService mapErrorValidationService;
 
     @Autowired

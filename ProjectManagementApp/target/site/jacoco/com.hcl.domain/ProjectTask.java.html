@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Entity
 <span class="fc" id="L13">@NoArgsConstructor</span>
-<span class="nc bnc" id="L14" title="All 94 branches missed.">@Data //including toString and getters and setters</span>
+<span class="pc bpc" id="L14" title="93 of 94 branches missed.">@Data //including toString and getters and setters</span>
 public class ProjectTask {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -23,8 +23,8 @@ public class ProjectTask {
     @NotBlank (message = &quot;Please include a task summary&quot;)
 <span class="nc" id="L24">    private String summary;</span>
 <span class="nc" id="L25">    private String acceptanceCriteria;</span>
-<span class="nc" id="L26">    private String status;</span>
-<span class="nc" id="L27">    private Integer priority;</span>
+<span class="fc" id="L26">    private String status;</span>
+<span class="fc" id="L27">    private Integer priority;</span>
     @JsonFormat(pattern=&quot;yyyy-mm-dd&quot;) //need to have this here...wasnt able to update the due date in project task
 <span class="nc" id="L29">    private Date dueDate;</span>
 
@@ -39,8 +39,8 @@ public class ProjectTask {
     }
 
     public void setBacklog(Backlog backlog) {
-<span class="nc" id="L42">        this.backlog = backlog;</span>
-<span class="nc" id="L43">    }</span>
+<span class="fc" id="L42">        this.backlog = backlog;</span>
+<span class="fc" id="L43">    }</span>
 
     @Column(updatable = false)
 <span class="nc" id="L46">    private String projectIdentifier;</span>

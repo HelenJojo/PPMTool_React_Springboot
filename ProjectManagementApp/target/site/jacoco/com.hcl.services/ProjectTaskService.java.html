@@ -31,34 +31,34 @@ import org.springframework.stereotype.Service;
         //all project tasks will be added and belong to a specific project...
         // project should != null and backlog exists
         //all the validation whether or not you are the owner of the project happens at the projectService level already
-<span class="nc" id="L34">        Backlog backlog = projectService.findProjectByIdentifier(projectIdentifier, username).getBacklog();</span>
+<span class="fc" id="L34">        Backlog backlog = projectService.findProjectByIdentifier(projectIdentifier, username).getBacklog();</span>
         //backlogRepository.findByProjectIdentifier(projectIdentifier); //find the backlog in which to add project task
 
 
         //set the backlog to the project task (to set up relationship)
-<span class="nc" id="L39">        projectTask.setBacklog(backlog);</span>
+<span class="fc" id="L39">        projectTask.setBacklog(backlog);</span>
 
         //projectSequence of Project will be [projectIdentifier + PTSequence (in/from Backlog)]
-<span class="nc" id="L42">        Integer backlogSequence = backlog.getPTSequence();</span>
+<span class="fc" id="L42">        Integer backlogSequence = backlog.getPTSequence();</span>
 
         //update the Backlog PTSequence
-<span class="nc" id="L45">        backlogSequence++;</span>
-<span class="nc" id="L46">        backlog.setPTSequence(backlogSequence); //very important! or ptsequence is just gonna stay at 1</span>
+<span class="fc" id="L45">        backlogSequence++;</span>
+<span class="fc" id="L46">        backlog.setPTSequence(backlogSequence); //very important! or ptsequence is just gonna stay at 1</span>
 
         //Add sequence to Project Task
-<span class="nc" id="L49">        projectTask.setProjectSequence(projectIdentifier + &quot;-&quot; + backlogSequence);</span>
-<span class="nc" id="L50">        projectTask.setProjectIdentifier(projectIdentifier);</span>
+<span class="fc" id="L49">        projectTask.setProjectSequence(projectIdentifier + &quot;-&quot; + backlogSequence);</span>
+<span class="fc" id="L50">        projectTask.setProjectIdentifier(projectIdentifier);</span>
 
         //Initial Priority (by default) when priority is null
         //where priority 1 is high and priority 3 is low
-<span class="nc bnc" id="L54" title="All 4 branches missed.">        if (projectTask.getPriority() == null || projectTask.getPriority() == 0) //in future we need projectTask.getPriority() == 0 to handle form on UI</span>
-<span class="nc" id="L55">            projectTask.setPriority(3);</span>
+<span class="pc bpc" id="L54" title="3 of 4 branches missed.">        if (projectTask.getPriority() == null || projectTask.getPriority() == 0) //in future we need projectTask.getPriority() == 0 to handle form on UI</span>
+<span class="fc" id="L55">            projectTask.setPriority(3);</span>
 
         //Initial status when status is null
-<span class="nc bnc" id="L58" title="All 4 branches missed.">        if (projectTask.getStatus() == &quot;&quot; || projectTask.getStatus() == null)</span>
-<span class="nc" id="L59">            projectTask.setStatus(&quot;TO_DO&quot;);</span>
+<span class="pc bpc" id="L58" title="2 of 4 branches missed.">        if (projectTask.getStatus() == &quot;&quot; || projectTask.getStatus() == null)</span>
+<span class="fc" id="L59">            projectTask.setStatus(&quot;TO_DO&quot;);</span>
 
-<span class="nc" id="L61">        return projectTaskRepository.save(projectTask);</span>
+<span class="fc" id="L61">        return projectTaskRepository.save(projectTask);</span>
 
 
     }

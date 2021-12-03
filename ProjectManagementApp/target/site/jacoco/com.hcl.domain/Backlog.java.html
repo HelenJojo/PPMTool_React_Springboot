@@ -9,14 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-<span class="nc bnc" id="L12" title="All 46 branches missed.">@Data</span>
+<span class="pc bnc" id="L12" title="All 46 branches missed.">@Data</span>
 <span class="fc" id="L13">@NoArgsConstructor</span>
 public class Backlog {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 <span class="nc" id="L17">    private Long id; //id in DB</span>
 
-<span class="pc" id="L19">    private Integer PTSequence = 0; //sequence of project tasks within a particular backlog</span>
+<span class="fc" id="L19">    private Integer PTSequence = 0; //sequence of project tasks within a particular backlog</span>
 <span class="nc" id="L20">    private String projectIdentifier; //Backlog is gonna share the same Identifier as the Project</span>
 
     //One-to-One with Project

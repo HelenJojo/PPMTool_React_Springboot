@@ -10,21 +10,21 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-<span class="nc bnc" id="L13" title="All 94 branches missed.">@Data</span>
+<span class="pc bpc" id="L13" title="93 of 94 branches missed.">@Data</span>
 <span class="fc" id="L14">@NoArgsConstructor</span>
 @Entity
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<span class="nc" id="L19">    private Long id; //database id</span>
+<span class="fc" id="L19">    private Long id; //database id</span>
 
     @NotBlank(message = &quot;Please provide a project name&quot;)
-<span class="nc" id="L22">    private String projectName;</span>
+<span class="fc" id="L22">    private String projectName;</span>
 
     @NotBlank(message = &quot;Please provide a project identifier&quot;)
     @Size(min = 4, max = 5, message = &quot;Please use 4 to 5 characters&quot;) //emulating Jira
     @Column(updatable = false, unique = true) //at database layer/level...happens after mapErrorValidation
-<span class="nc" id="L27">    private String projectIdentifier; //custom identifier known to user</span>
+<span class="fc" id="L27">    private String projectIdentifier; //custom identifier known to user</span>
 
     @NotBlank(message = &quot;Please provide a project description&quot;)
 <span class="nc" id="L30">    private String description;</span>
@@ -58,26 +58,34 @@ public class Project {
     @JsonIgnore
 <span class="nc" id="L59">    private User user;</span>
 
-<span class="nc" id="L61">    private String projectLeader;</span>
+<span class="fc" id="L61">    private String projectLeader;</span>
+
+<span class="fc" id="L63">    public Project(Long id, String projectName, String projectIdentifier, String description, String projectLeader) {</span>
+<span class="fc" id="L64">        this.id = id;</span>
+<span class="fc" id="L65">        this.projectName = projectName;</span>
+<span class="fc" id="L66">        this.projectIdentifier = projectIdentifier;</span>
+<span class="fc" id="L67">        this.description = description;</span>
+<span class="fc" id="L68">        this.projectLeader = projectLeader;</span>
+<span class="fc" id="L69">    }</span>
 
     public Backlog getBacklog() {
-<span class="nc" id="L64">        return backlog;</span>
+<span class="fc" id="L72">        return backlog;</span>
     }
 
     public void setBacklog(Backlog backlog) {
-<span class="nc" id="L68">        this.backlog = backlog;</span>
-<span class="nc" id="L69">    }</span>
+<span class="fc" id="L76">        this.backlog = backlog;</span>
+<span class="fc" id="L77">    }</span>
 
     @PrePersist
     protected void onCreate() //every time we create a new object, assigns a new date
     {
-<span class="nc" id="L74">        this.createdAt = new Date();</span>
-<span class="nc" id="L75">    }</span>
+<span class="nc" id="L82">        this.createdAt = new Date();</span>
+<span class="nc" id="L83">    }</span>
 
     @PreUpdate
     protected void onUpdate() {
-<span class="nc" id="L79">        this.updatedAt = new Date();</span>
-<span class="nc" id="L80">    }</span>
+<span class="nc" id="L87">        this.updatedAt = new Date();</span>
+<span class="nc" id="L88">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

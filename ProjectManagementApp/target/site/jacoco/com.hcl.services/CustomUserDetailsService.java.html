@@ -22,17 +22,17 @@ import org.springframework.transaction.annotation.Transactional;
     *  user details from the database when authenticating the user details provided by the user.
     * */
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-<span class="nc" id="L25">        User user = userRepository.findByUsername(username);</span>
-<span class="nc bnc" id="L26" title="All 2 branches missed.">        if(user==null) new UsernameNotFoundException(&quot;User not found&quot;);</span>
-<span class="nc" id="L27">        return user;</span>
+<span class="fc" id="L25">        User user = userRepository.findByUsername(username);</span>
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">        if(user==null) new UsernameNotFoundException(&quot;User not found&quot;);</span>
+<span class="fc" id="L27">        return user;</span>
     }
 
 
     @Transactional
     public User loadUserById(Long id){
-<span class="nc" id="L33">        User user = userRepository.getById(id);</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">        if(user==null) new UsernameNotFoundException(&quot;User not found&quot;);</span>
-<span class="nc" id="L35">        return user;</span>
+<span class="fc" id="L33">        User user = userRepository.getById(id);</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if(user==null) new UsernameNotFoundException(&quot;User not found&quot;);</span>
+<span class="fc" id="L35">        return user;</span>
 
     }
 }
