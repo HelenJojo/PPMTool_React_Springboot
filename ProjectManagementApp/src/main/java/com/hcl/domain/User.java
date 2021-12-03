@@ -41,6 +41,13 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "user", orphanRemoval = true)
     private List<Project> projects = new ArrayList<>();
 
+    public User(Long id, String username, String fullName, String password) {
+        this.id = id;
+        this.username = username;
+        this.fullName = fullName;
+        this.password = password;
+    }
+
     @PrePersist
     protected void onCreate() { this.createdAt = new Date(); }
 

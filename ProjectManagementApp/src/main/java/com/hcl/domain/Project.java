@@ -60,6 +60,14 @@ public class Project {
 
     private String projectLeader;
 
+    public Project(Long id, String projectName, String projectIdentifier, String description, String projectLeader) {
+        this.id = id;
+        this.projectName = projectName;
+        this.projectIdentifier = projectIdentifier;
+        this.description = description;
+        this.projectLeader = projectLeader;
+    }
+
     public Backlog getBacklog() {
         return backlog;
     }
