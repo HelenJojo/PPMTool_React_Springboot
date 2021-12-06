@@ -1,13 +1,4 @@
 package com.hcl.controllerTests;
-import static org.mockito.Mockito.when;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.context.annotation.Configuration;
-
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hcl.domain.Project;
@@ -17,19 +8,18 @@ import com.hcl.services.ProjectService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.json.JacksonJsonParser;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 
 import java.util.ArrayList;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @SpringBootTest
@@ -69,7 +59,7 @@ public class ProjectControllerTest {
 
         mockMvc.perform(get("/api/project/all")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .header("Authorization", "Bearer "))
+                        .header("Authorization", "Bearer eyJ1c2VybmFtZSI6ImpvaG5fZG9lQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicGFzc3dvcmQifQ"))
                 .andExpect(jsonPath("$.username").value("Invalid Username"))
                 .andExpect(jsonPath("$.password").value("Invalid Password"));
     }

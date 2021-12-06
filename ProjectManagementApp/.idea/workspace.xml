@@ -20,6 +20,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="21mKLtEugGsem54yRl3P3Imkrq9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,9 +37,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="format.on.save" value="true" />
+    <property name="optimize.imports.on.save" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="actions.on.save" />
   </component>
   <component name="RunManager" selected="JUnit.ProjectManagementAppApplicationTests">
     <configuration name="ProjectControllerTest.testGetAllProjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -65,21 +76,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectManagementApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hcl.serviceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProjectTaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
@@ -95,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTaskServiceTest.testFindBacklogById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
         <pattern>
@@ -104,8 +100,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
+      <option name="METHOD_NAME" value="testFindBacklogById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTaskServiceTest.testFindBacklogById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectManagementApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hcl.serviceTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
+      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
+      <option name="METHOD_NAME" value="testFindBacklogById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTaskServiceTest.testaddProjectTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectManagementApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hcl.serviceTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
+      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
+      <option name="METHOD_NAME" value="testaddProjectTask" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,10 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProjectManagementAppApplicationTests" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.ProjectServiceTest" />
         <item itemvalue="JUnit.ProjectTaskServiceTest" />
-        <item itemvalue="JUnit.ProjectControllerTest.testGetAllProjects" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindBacklogById" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testaddProjectTask" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindBacklogById" />
       </list>
     </recent_temporary>
   </component>
