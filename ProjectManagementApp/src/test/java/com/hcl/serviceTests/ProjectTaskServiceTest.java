@@ -108,4 +108,32 @@ public class ProjectTaskServiceTest {
         //Assertions.assertEquals(ptFromService, myPT);
 
     }
+
+    @Test
+    public void testFindPTByProjectSequence() {
+        /* Act */
+        when(projectRepository.findByProjectIdentifier(myPID)).thenReturn(myProject);
+        when(projectTaskRepository.findByProjectSequence(pSequence_two)).thenReturn(myPT_two);
+
+        /* Assert */
+        ProjectTask ptFromService = projectTaskService.findPTByProjectSequence(myPID, pSequence_two, myUsername);
+        Assertions.assertEquals(ptFromService, myPT_two);
+    }
+
+    @Test
+    public void testUpdateByProjectSequence() {
+        /* Act */
+        when(projectRepository.findByProjectIdentifier(myPID)).thenReturn(myProject);
+        when(projectTaskRepository.findByProjectSequence(pSequence)).thenReturn(myPT);
+        when(projectTaskRepository.save(myPT)).thenReturn(myPT);
+        myPT.setSummary("Updated Summary");
+        when(projectTaskRepository.save(myPT)).thenReturn(myPT);
+
+        /* Assert */
+        ProjectTask ptFromService = projectTaskService.findPTByProjectSequence(myPID, pSequence, myUsername);
+        Assertions.assertEquals(ptFromService, myPT);
+        Assertions.assertEquals(ptFromService.getSummary(), myPT.getSummary());
+
+    }
+
 } //end of ProjectTaskServiceTest.java

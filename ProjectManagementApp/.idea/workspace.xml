@@ -45,22 +45,6 @@
     <property name="settings.editor.selected.configurable" value="actions.on.save" />
   </component>
   <component name="RunManager" selected="JUnit.ProjectManagementAppApplicationTests">
-    <configuration name="ProjectControllerTest.testGetAllProjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectManagementApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hcl.controllerTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hcl.controllerTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.controllerTests.ProjectControllerTest" />
-      <option name="METHOD_NAME" value="testGetAllProjects" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProjectManagementAppApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
@@ -107,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTaskServiceTest.testFindBacklogById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTaskServiceTest.testFindPTByProjectSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +101,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
       <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
-      <option name="METHOD_NAME" value="testFindBacklogById" />
+      <option name="METHOD_NAME" value="testFindPTByProjectSequence" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTaskServiceTest.testaddProjectTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTaskServiceTest.testFindPTByProjectSequence2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +117,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
       <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
-      <option name="METHOD_NAME" value="testaddProjectTask" />
+      <option name="METHOD_NAME" value="testFindPTByProjectSequence2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTaskServiceTest.testUpdateByProjectSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectManagementApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hcl.serviceTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
+      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateByProjectSequence" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,10 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProjectManagementAppApplicationTests" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindPTByProjectSequence2" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testUpdateByProjectSequence" />
+        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindPTByProjectSequence" />
         <item itemvalue="JUnit.ProjectTaskServiceTest" />
-        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindBacklogById" />
-        <item itemvalue="JUnit.ProjectTaskServiceTest.testaddProjectTask" />
-        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindBacklogById" />
       </list>
     </recent_temporary>
   </component>

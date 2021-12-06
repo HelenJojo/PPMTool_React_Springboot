@@ -1,1 +1,5 @@
+com\hcl\controllerTests\ProjectControllerTest.class
+com\hcl\serviceTests\UserServiceTest.class
+com\hcl\serviceTests\ProjectServiceTest.class
+com\hcl\serviceTests\ProjectTaskServiceTest.class
 com\hcl\ProjectManagementAppApplicationTests.class

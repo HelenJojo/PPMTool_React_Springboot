@@ -68,7 +68,7 @@ public class UserServiceTest {
         Assertions.assertEquals("Test@test.com", myUser.getUsername());
         //asserting that password that gets saved to User is the encoded one and it matches the original string
         boolean isPasswordMatch = passwordEncoder.matches(password, myUser.getPassword());
-        Assertions.assertEquals(isPasswordMatch, true);
+        Assertions.assertEquals(true, isPasswordMatch);
     }
 
     /* Tests for CustomUserDetailsService class */
