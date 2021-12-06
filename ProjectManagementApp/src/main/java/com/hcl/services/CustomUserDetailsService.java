@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import static com.hcl.ProjectManagementAppApplication.myLog;
+
 @Service
 //part of JWT Provider pre-work
 public class CustomUserDetailsService implements UserDetailsService {
@@ -18,20 +20,22 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     /*
-    * The Spring Security Authentication Manager calls this method for getting the
-    *  user details from the database when authenticating the user details provided by the user.
-    * */
+     * The Spring Security Authentication Manager calls this method for getting the
+     *  user details from the database when authenticating the user details provided by the user.
+     * */
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
-        if(user==null) new UsernameNotFoundException("User not found");
+        if (user == null) new UsernameNotFoundException("User not found");
+        myLog.debug("User not found by name " + username);
         return user;
     }
 
 
     @Transactional
-    public User loadUserById(Long id){
+    public User loadUserById(Long id) {
         User user = userRepository.getById(id);
-        if(user==null) new UsernameNotFoundException("User not found");
+        if (user == null) new UsernameNotFoundException("User not found");
+        myLog.debug("User not found");
         return user;
 
     }

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cad7b3a-ca11-45fa-8db6-d7d252ac9668" name="Changes" comment="Have extended the service tests for User, and added tests for Project class as well...confirming they all pass!" />
+    <list default="true" id="5cad7b3a-ca11-45fa-8db6-d7d252ac9668" name="Changes" comment="Have extended the service tests for User, and added tests for Project class as well...confirming they all pass!">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/ProjectManagementAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/ProjectManagementAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/security/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hcl/ProjectManagementAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hcl/ProjectManagementAppApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hcl/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hcl/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hcl/serviceTests/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hcl/serviceTests/UserServiceTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,13 +54,32 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="format.on.save" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="optimize.imports.on.save" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="actions.on.save" />
   </component>
-  <component name="RunManager" selected="JUnit.ProjectManagementAppApplicationTests">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\capstone\ProjectManagementApp\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ProjectManagementAppApplication">
+    <configuration name="ProjectManagementAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hcl.ProjectManagementAppApplication" />
+      <module name="ProjectManagementApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hcl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjectManagementAppApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
@@ -60,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectServiceTest.testSaveProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectManagementApp" />
       <extension name="coverage">
         <pattern>
@@ -69,39 +104,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectTaskServiceTest.testFindBacklogById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectManagementApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hcl.serviceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
-      <option name="METHOD_NAME" value="testFindBacklogById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectTaskServiceTest.testFindPTByProjectSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectManagementApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hcl.serviceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hcl.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectTaskServiceTest" />
-      <option name="METHOD_NAME" value="testFindPTByProjectSequence" />
+      <option name="MAIN_CLASS_NAME" value="com.hcl.serviceTests.ProjectServiceTest" />
+      <option name="METHOD_NAME" value="testSaveProject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProjectManagementAppApplication" />
         <item itemvalue="JUnit.ProjectManagementAppApplicationTests" />
+        <item itemvalue="JUnit.ProjectServiceTest.testSaveProject" />
         <item itemvalue="JUnit.ProjectTaskServiceTest.testFindPTByProjectSequence2" />
         <item itemvalue="JUnit.ProjectTaskServiceTest.testUpdateByProjectSequence" />
-        <item itemvalue="JUnit.ProjectTaskServiceTest.testFindPTByProjectSequence" />
-        <item itemvalue="JUnit.ProjectTaskServiceTest" />
       </list>
     </recent_temporary>
   </component>

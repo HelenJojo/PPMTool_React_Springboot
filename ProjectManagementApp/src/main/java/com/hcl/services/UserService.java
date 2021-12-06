@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import static com.hcl.ProjectManagementAppApplication.myLog;
+
 @Service
 public class UserService {
 
@@ -17,7 +19,7 @@ public class UserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User saveUser(User newUser) {
-        try{ //this encode() just encodes the password
+        try { //this encode() just encodes the password
             newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
             //Username has to be unique (exception)
@@ -26,13 +28,15 @@ public class UserService {
             // Make sure that password and confirmPassword match
             // We don't persist or show the confirmPassword
             newUser.setConfirmPassword("");
-            return userRepository.save(newUser);}
-        catch(Exception e){
-            throw new UsernameAlreadyExistsException("Username '" + newUser.getUsername()+ "' already exists!");
+            return userRepository.save(newUser);
+        } catch (Exception e) {
+            myLog.error("Username '" + newUser.getUsername() + "' already exists!");
+            throw new UsernameAlreadyExistsException("Username '" + newUser.getUsername() + "' already exists!");
         }
 
     }
-    public Iterable<User> findAll(){
+
+    public Iterable<User> findAll() {
         return userRepository.findAll();
     }
 }
