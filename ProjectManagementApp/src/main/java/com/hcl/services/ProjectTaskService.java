@@ -1,7 +1,6 @@
 package com.hcl.services;
 
 import com.hcl.domain.Backlog;
-import com.hcl.domain.Project;
 import com.hcl.domain.ProjectTask;
 import com.hcl.exceptions.ProjectNotFoundException;
 import com.hcl.repositories.BacklogRepository;
@@ -9,6 +8,8 @@ import com.hcl.repositories.ProjectRepository;
 import com.hcl.repositories.ProjectTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static com.hcl.ProjectManagementAppApplication.myLog;
 
 
 @Service
@@ -57,7 +58,7 @@ public class ProjectTaskService {
         //Initial status when status is null
         if (projectTask.getStatus() == "" || projectTask.getStatus() == null)
             projectTask.setStatus("TO_DO");
-
+        myLog.debug("Added Project task" + projectIdentifier);
         return projectTaskRepository.save(projectTask);
 
 
@@ -83,7 +84,7 @@ public class ProjectTaskService {
         //so case where even though project task is valid AND project id is valid but you are searching in the wrong backlog (/project)
         if (!projectTask.getProjectIdentifier().equals(backlogId))
             throw new ProjectNotFoundException("Project Task '" + ptId + "' does not exist in project '" + backlogId + "'");
-
+        myLog.debug("Project Task '" + ptId + "' does not exist in project '" + backlogId + "'");
         return projectTask;
     }
 
@@ -95,6 +96,7 @@ public class ProjectTaskService {
         projectTask = updatedTask;
 
         //save and update
+        myLog.info("Project" + ptId + " task saved successfully");
         return projectTaskRepository.save(projectTask);
     }
 

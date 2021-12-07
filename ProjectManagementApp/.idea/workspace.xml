@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cad7b3a-ca11-45fa-8db6-d7d252ac9668" name="Changes" comment="Have extended the service tests for User, and added tests for Project class as well...confirming they all pass!">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/ProjectManagementAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/ProjectManagementAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/security/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hcl/ProjectManagementAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hcl/ProjectManagementAppApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hcl/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hcl/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hcl/serviceTests/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hcl/serviceTests/UserServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hcl/services/ProjectTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hcl/services/ProjectTaskService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

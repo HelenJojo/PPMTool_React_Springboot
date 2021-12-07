@@ -11,6 +11,8 @@ import com.hcl.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static com.hcl.ProjectManagementAppApplication.myLog;
+
 @Service
 public class ProjectService {
 
@@ -25,13 +27,15 @@ public class ProjectService {
 
     //for both inserting (/creating) and updating a project
     public Project saveOrUpdateProject(Project project, String username) {
-        if(project.getId() != null) //wanna update the project as opposed to creating one
+        if (project.getId() != null) //wanna update the project as opposed to creating one
         {
             Project existingProject = projectRepository.findByProjectIdentifier(project.getProjectIdentifier());
-            if(existingProject !=null &&(!existingProject.getProjectLeader().equals(username))){
+            if (existingProject != null && (!existingProject.getProjectLeader().equals(username))) {
+                myLog.error("Project not found in your account");
                 throw new ProjectNotFoundException("Project not found in your account");
-            }else if(existingProject == null){
-                throw new ProjectNotFoundException("Project with ID: '"+project.getProjectIdentifier()+"' cannot be updated because it doesn't exist");
+            } else if (existingProject == null) {
+                myLog.error("Project with ID: '" + project.getProjectIdentifier() + "' cannot be updated because it doesn't exist");
+                throw new ProjectNotFoundException("Project with ID: '" + project.getProjectIdentifier() + "' cannot be updated because it doesn't exist");
             }
         }
 
@@ -66,11 +70,15 @@ public class ProjectService {
     public Project findProjectByIdentifier(String projectId, String username) {
         Project project = projectRepository.findByProjectIdentifier(projectId.toUpperCase());
 
-        if (project == null)
+        if (project == null) {
+            myLog.error("Project ID '" + projectId + "' does not exist");
             throw new ProjectIdException("Project ID '" + projectId + "' does not exist");
+        }
 
-        if(!project.getProjectLeader().equals(username))
+        if (!project.getProjectLeader().equals(username)) {
+            myLog.error("Project not found in your account!");
             throw new ProjectNotFoundException("Project not found in your account!");
+        }
 
 
         return project;
